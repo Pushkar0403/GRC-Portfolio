@@ -8,15 +8,15 @@
 
 This assessment completes the Annex A Statement of Applicability and identifies implementation evidence gaps. It does not establish compliance or operating effectiveness for controls whose result remains Not assessed.
 
-The workflow review is complete for every Annex A control. It is not a certification conclusion: 85 controls are applicable with **Not assessed** results and **Unverified** implementation status; 8 controls are **Not applicable**. The 30 ISO core clauses remain unselected and outside this SoA.
+The workflow review is complete for every Annex A control. It is not a certification conclusion: 86 controls are applicable with **Not assessed** results and **Unknown/Unverified** implementation status; 7 controls are **Not applicable**. The 30 ISO core clauses remain unselected and outside this SoA.
 
 | Theme | Total | Applicable | Excluded | Not assessed | Not applicable |
 |---|---:|---:|---:|---:|---:|
 | A.5 | 37 | 37 | 0 | 37 | 0 |
 | A.6 | 8 | 8 | 0 | 8 | 0 |
-| A.7 | 14 | 7 | 7 | 7 | 7 |
+| A.7 | 14 | 8 | 6 | 8 | 6 |
 | A.8 | 34 | 33 | 1 | 33 | 1 |
-| **Total** | **93** | **85** | **8** | **85** | **8** |
+| **Total** | **93** | **86** | **7** | **86** | **7** |
 
 Risk identifiers: R-001 unauthorised customer-data access; R-002 laptop theft/loss; R-003 cloud misconfiguration; R-004 insider threat; R-005 AWS/third-party breach; R-006 business-continuity failure.
 
@@ -81,7 +81,7 @@ For every applicable row, no supporting policy, configuration, contract, log, tr
 | A.7.8 | Equipment siting and protection | Yes | Not assessed | Unverified | R-002 |
 | A.7.9 | Security of assets off-premises | Yes | Not assessed | Unverified | R-002 |
 | A.7.10 | Storage media | Yes | Not assessed | Unverified | R-001/R-002 |
-| A.7.11 | Supporting utilities | No | Not applicable | Not applicable | — |
+| A.7.11 | Supporting utilities | Yes | Not assessed | Unknown/Unverified | R-006 |
 | A.7.12 | Cabling security | No | Not applicable | Not applicable | — |
 | A.7.13 | Equipment maintenance | Yes | Not assessed | Unverified | R-002 |
 | A.7.14 | Secure disposal or re-use of equipment | Yes | Not assessed | Unverified | R-001/R-002 |
@@ -126,7 +126,6 @@ For every applicable row, no supporting policy, configuration, contract, log, tr
 |---|---|---|
 | A.7.1–A.7.4 | CloudNative operates no company physical perimeter, entry point, office, data centre, or physical monitoring system. AWS facilities are outside the ISMS perimeter. | AWS supplier/cloud governance; endpoint, remote-work, access, logging and monitoring controls. Reassess if a company facility is introduced. |
 | A.7.6 | No company-operated secure area exists. | Remote-work, endpoint and access controls. Reassess if a secure room or controlled site is created. |
-| A.7.11 | The company does not operate power/cooling utilities for its AWS-hosted service. | AWS cloud governance, backup, redundancy and continuity controls. Reassess for any on-premises processing or facility. |
 | A.7.12 | No company-managed facility cabling exists. | Remote-work, endpoint and network-security controls. Reassess if managed cabling is installed. |
 | A.8.30 | The scenario expressly states that development is internal and not outsourced. | Internal SDLC, code-access, testing, environment separation and change controls. Reassess before an external party develops or maintains code. |
 
@@ -156,4 +155,53 @@ No risk acceptance, residual rating, or existing-control effectiveness has been 
 ## Evidence priorities
 
 Collect: approved ISMS policies/procedures; asset, data-classification and supplier inventories; AWS/IAM/configuration, encryption, backup and log evidence; endpoint-management evidence; HR/NDA/offboarding/training records; incident and recovery exercise results; and secure-SDLC/change/test records.
+
+## Final mapping reconciliation
+
+The CISO Assistant observations are the authoritative per-control record. This reconciliation supersedes any earlier broad risk labels in the first matrix above. Controls are linked only where their purpose contributes to one or more of the six source scenarios; absence from a list does not imply a control is unimportant.
+
+| Risk | Reconciled Annex A controls |
+|---|---|
+| R-001 Customer-data access | A.5.1-A.5.5, A.5.8-A.5.18, A.5.23-A.5.29, A.5.31-A.5.37, A.6.3, A.6.5-A.6.8, A.7.7, A.7.10, A.7.14, A.8.1-A.8.5, A.8.7-A.8.12, A.8.15-A.8.16, A.8.19-A.8.34. |
+| R-002 Laptop theft/loss | A.5.9-A.5.11, A.6.3, A.6.5, A.6.7, A.7.5, A.7.7-A.7.10, A.7.13-A.7.14, A.8.1, A.8.7, A.8.19, A.8.23. |
+| R-003 Cloud misconfiguration | A.5.1-A.5.4, A.5.6-A.5.9, A.5.15-A.5.18, A.5.21, A.5.23-A.5.29, A.5.32-A.5.33, A.5.35-A.5.37, A.6.3, A.6.7-A.6.8, A.8.2-A.8.5, A.8.8-A.8.9, A.8.15-A.8.18, A.8.20, A.8.22, A.8.25-A.8.29, A.8.31-A.8.34. |
+| R-004 Insider threat | A.5.2-A.5.4, A.5.10-A.5.12, A.5.15-A.5.18, A.5.32, A.6.1-A.6.2, A.6.4-A.6.6, A.8.2-A.8.5, A.8.12, A.8.15, A.8.18. |
+| R-005 AWS/third-party breach | A.5.1, A.5.5-A.5.7, A.5.12, A.5.14, A.5.19-A.5.31, A.5.35-A.5.36, A.6.8, A.7.11, A.8.10, A.8.15-A.8.17, A.8.20-A.8.21, A.8.24. |
+| R-006 Business-continuity failure | A.5.1-A.5.4, A.5.8-A.5.9, A.5.22-A.5.24, A.5.26, A.5.29-A.5.30, A.5.33, A.5.35-A.5.37, A.7.5, A.7.11, A.7.13, A.8.6, A.8.13-A.8.14, A.8.21, A.8.27, A.8.32, A.8.34. |
+
+## Evidence reference index (educational case study)
+
+No item below is currently an evidence object or proof of implementation. It is the index of evidence required before a later design or operating-effectiveness conclusion.
+
+| ID | Evidence required | Main control areas | Status |
+|---|---|---|---|
+| EI-01 | Approved ISMS policy set, control owners and policy review history | A.5.1-A.5.4, A.5.36-A.5.37 | Missing |
+| EI-02 | AWS architecture, shared-responsibility analysis and supplier assurance | A.5.19-A.5.23, A.7.11, A.8.14, A.8.20-A.8.21 | Missing |
+| EI-03 | IAM, MFA, privileged-access, access-review and source-repository records | A.5.15-A.5.18, A.8.2-A.8.5 | Missing |
+| EI-04 | Managed-endpoint inventory, encryption, MDM/EDR, loss and disposal records | A.6.7, A.7.5, A.7.7-A.7.14, A.8.1, A.8.7 | Missing |
+| EI-05 | Incident procedures, triage, response, lessons learned and evidence-handling records | A.5.24-A.5.28, A.6.8, A.8.15-A.8.17 | Missing |
+| EI-06 | Recovery objectives, backup configuration, restore/failover tests and continuity exercises | A.5.29-A.5.30, A.7.11, A.8.6, A.8.13-A.8.14 | Missing |
+| EI-07 | Secure SDLC, threat modelling, code review, testing, environment separation and change records | A.5.8, A.8.25-A.8.34 except A.8.30 | Missing |
+| EI-08 | HR screening, terms, NDA, training and offboarding records | A.6.1-A.6.6 | Missing |
+
+## Detailed exclusion defences and alternative measures
+
+| Exclusion | Defence and alternative measures | Auditor challenge / answer |
+|---|---|---|
+| A.7.1 Physical security perimeters | There is no company-controlled office, data centre or perimeter. AWS data-centre security is a supplier dependency; employee endpoint risk is addressed through applicable A.6.7, A.7.5, A.7.9 and A.8.1. Reassess if CloudNative opens or controls a facility. | “What about homes?” Homes are not company premises; this does not remove endpoint and remote-work obligations. |
+| A.7.2 Physical entry | No company-controlled entry point exists. AWS entry controls are evaluated through cloud/supplier governance, not as CloudNative facility controls. | “Does AWS remove the need to assess it?” No; A.5.19-A.5.23 remain applicable. |
+| A.7.3 Securing offices, rooms and facilities | No company office, room or facility is in the ISMS boundary. Endpoint safeguards are not excluded. | “What if temporary space is rented?” Reassess before it stores information assets or supports operations. |
+| A.7.4 Physical security monitoring | CloudNative operates no CCTV, alarm, or monitored site. AWS monitoring is a supplier assurance matter. | “Can this be marked compliant through AWS?” No; it is not applicable to a non-existent CloudNative facility. |
+| A.7.6 Working in secure areas | The organization operates no secure area. Access-controlled cloud and endpoint activity remains in scope. | “Are administrative activities secure areas?” Not physical secure areas as contemplated by this control; access controls remain applicable. |
+| A.7.12 Cabling security | No company-managed site or cabling exists. AWS cabling is supplier-operated; home cabling is not a company installation. | “Could a future office change this?” Yes; select and assess before occupation. |
+| A.8.30 Outsourced development | The scenario states there is no development outsourcing. Internal SDLC controls remain applicable. | “What about a contractor?” Select this control before any outside party develops or maintains code. |
+
+## Walkthrough outline
+
+1. State the educational case-study boundary and distinguish the 93 Annex A controls from the 30 unselected core-clause entries.
+2. Explain why 86 controls are applicable but Not assessed: applicability is complete; implementation and operating evidence are not.
+3. Walk through the seven exclusions and why A.7.11 was moved back into scope for AWS utility-resilience dependency.
+4. Present R-001 to R-006, the original likelihood/impact values, and the 5x5 matrix conversion. R-003 is **Critical** in the source summary but **High** in the matrix because index 3 × index 3 falls in the matrix high cell; R-005 is source **High** but matrix **Medium** because low likelihood (1) × catastrophic impact (4) falls in the matrix medium cell.
+5. Show that all six CISO treatment controls are proposed, To do, pending management ownership and approval, and supported by no effectiveness evidence.
+6. Close with the evidence-index priorities and the condition that no certification or risk acceptance conclusion is made.
 
