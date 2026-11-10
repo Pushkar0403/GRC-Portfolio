@@ -136,7 +136,22 @@ A.7.5 and A.7.8 are applicable. Remote company-managed laptops remain exposed to
 
 ## Risk-to-control traceability and CISO limitations
 
-The six scenario risks map to the individual control risk columns above. CISO Assistant currently has no configured risk matrix, no CloudNative assets, no applied controls, and no meaningful evidence objects. Accordingly, no risk scenario, control, or evidence relation is represented as implemented or effective, and no placeholder CSV evidence labels were linked. Once an approved risk matrix is configured, create exactly R-001 through R-006 with the original ratings, and associate only proposed controls or evidence-supported existing controls.
+The six scenario risks map to the individual control risk columns above. The risk register now uses CISO Assistant's built-in **5x5 ISO-27005** matrix (ID `5b41033b-720b-47f7-aedc-b8fb9d59ed8b`) and the existing CloudNative ISMS scope. It uses proposed treatment controls, not asserted existing controls, because no implementation evidence was provided.
+
+## Risk register and supported control relationships
+
+Source likelihood maps Low/Medium/High to matrix indices 1/2/3; source impact maps Medium/High/Critical to 2/3/4. This preserves the scenario facts even when the 5x5 grid's named overall level differs from the source summary.
+
+| Risk | CISO risk ID | Source / matrix rating | Matrix overall level | Linked proposed treatment and Annex A relationship | Residual-risk position |
+|---|---|---|---|---|---|
+| R-001 Unauthorised customer-data access | `4525a414-20d2-48ce-b269-ce307fec56ae` | Medium / High → 2 / 3 | High (index 3) | Proposed R-001 access and data-protection treatment; A.5.15-A.5.18, A.5.34, A.8.2-A.8.5, A.8.15-A.8.16, A.8.24 | Unknown pending access, IAM, logging and encryption evidence. |
+| R-002 Employee laptop theft/loss | `ecaa2d48-d84c-4c16-89bb-b2205aff3a5d` | Medium / Medium → 2 / 2 | Medium (index 2) | Proposed R-002 endpoint protection treatment; A.6.7, A.7.5, A.7.7-A.7.10, A.7.13-A.7.14, A.8.1 | Unknown pending encryption, MDM, remote-wipe and loss-response evidence. |
+| R-003 AWS cloud misconfiguration | `7091c669-e05e-4e3c-96d0-2405df39ddb9` | High / High → 3 / 3 | High (index 3) | Proposed R-003 cloud configuration treatment; A.5.23, A.8.2-A.8.3, A.8.8-A.8.9, A.8.15-A.8.16, A.8.20-A.8.22 | Unknown pending configuration, review, vulnerability and monitoring evidence. |
+| R-004 Insider threat | `c4c25c8b-69b5-4ee0-be82-de41aa8b63ae` | Low / High → 1 / 3 | Medium (index 2) | Proposed R-004 insider-risk treatment; A.5.2-A.5.4, A.5.15-A.5.18, A.6.1-A.6.6, A.8.2-A.8.5 | Unknown pending HR, access-review, segregation and monitoring evidence. |
+| R-005 AWS third-party breach | `3d81424d-a4b5-4df8-b916-b60150021f87` | Low / Critical → 1 / 4 | Medium (index 2) | Proposed R-005 AWS supplier-risk treatment; A.5.19-A.5.23, A.5.29-A.5.31, A.8.13-A.8.14 | Unknown pending AWS assurance, contract, shared-responsibility and continuity evidence. |
+| R-006 Business-continuity failure | `ec5b60e5-25ab-4b92-8744-17090d7e0cd0` | Low / High → 1 / 3 | Medium (index 2) | Proposed R-006 continuity treatment; A.5.29-A.5.30, A.8.6, A.8.13-A.8.14 | Unknown pending recovery objectives, backup restoration, redundancy and failover exercise evidence. |
+
+No risk acceptance, residual rating, or existing-control effectiveness has been recorded. The recommended treatment for all six scenarios is mitigate; R-005 may also use contractual risk transfer where appropriate. The treatment relationships do not change the corresponding Annex A results, which remain Not assessed pending evidence.
 
 ## Evidence priorities
 
