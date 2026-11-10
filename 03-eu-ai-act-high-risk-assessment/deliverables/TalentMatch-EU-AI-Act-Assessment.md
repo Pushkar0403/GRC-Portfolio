@@ -79,3 +79,7 @@ Approval requires independently reviewed fairness and performance results; a red
 - Prohibition: none is established; the recommendation is conditional non-deployment.
 
 Five-minute walkthrough: describe lifecycle and affected candidates; classify under Article 6/Annex III; distinguish current and 2027 duties; explain bias and top-20 risk; explain limits of 78%/SHAP; show seven risks and To do treatments; conclude with objective approval conditions.
+
+## Complementary governance crosswalk
+
+The [EU AI Act / NIST AI RMF / ISO 42001 crosswalk](EU-AI-Act-NIST-ISO42001-Crosswalk.md) connects the 19 scoped legal records to the voluntary NIST AI RMF 1.0 and ISO/IEC 42001:2023 AIMS requirements. It does not make a NIST or ISO compliance claim: the EU AI Act remains the legal assessment, NIST provides risk-management outcomes, and ISO 42001 provides a management-system model. The related risk mapping and governance-gap analysis preserve all seven proposed controls as **To do** and preserve the non-approval deployment recommendation.
