@@ -1,0 +1,42 @@
+Parameters:
+  AccessKeysRotatedMaxAge:
+    Type: String
+    Default: '90'
+Resources:
+  RootMfaEnabled:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: grc-demo-cis-root-mfa-enabled
+      Source:
+        Owner: AWS
+        SourceIdentifier: ROOT_ACCOUNT_MFA_ENABLED
+  IamUserMfaEnabled:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: grc-demo-cis-iam-user-mfa-enabled
+      Source:
+        Owner: AWS
+        SourceIdentifier: IAM_USER_MFA_ENABLED
+  AccessKeysRotated:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: grc-demo-cis-access-keys-rotated
+      InputParameters:
+        maxAccessKeyAge: !Ref AccessKeysRotatedMaxAge
+      Source:
+        Owner: AWS
+        SourceIdentifier: ACCESS_KEYS_ROTATED
+  S3PublicReadProhibited:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: grc-demo-cis-s3-public-read-prohibited
+      Source:
+        Owner: AWS
+        SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
+  S3PublicWriteProhibited:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: grc-demo-cis-s3-public-write-prohibited
+      Source:
+        Owner: AWS
+        SourceIdentifier: S3_BUCKET_PUBLIC_WRITE_PROHIBITED

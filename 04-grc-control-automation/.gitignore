@@ -1,0 +1,24 @@
+# AWS credentials and local Terraform state
+.aws/
+*.pem
+*.key
+.terraform/
+terraform/config-rules/*.zip
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Generated evidence may contain bucket names or account identifiers
+evidence/
+output/
+
+# Python local files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Editor files
+.vscode/
+.idea/
